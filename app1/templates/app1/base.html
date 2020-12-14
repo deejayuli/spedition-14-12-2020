@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     {%load static %}
     <link rel="stylesheet" href=" {% static 'css/styles.css'%}" \>
-    {% block titel %}<title>Spedition XYZ </title>{% endblock titel%}
+    {% block titel %}<title>Spedition XYZ <i class="fas fa-truck"></i></title>{% endblock titel%}
    
   </head>
   <body>
@@ -33,7 +33,7 @@
             </ol>
 
 <div class="row row-cols-3">
-<div class="card bg-info">
+<div class="auftrag-card">
   
   <div class="card-header">
     Auftragsbearbeitung
@@ -45,7 +45,7 @@
     <a href="#" class="btn btn-primary">Erfassen</a>
   </div>
 </div>
-<div class="card bg-info">
+<div class="card auftrag-card">
   <div class="card-header">
     Auftragsbearbeitung
   </div>
@@ -55,7 +55,7 @@
     <a href="#" class="btn btn-primary">bearbeiten</a>
   </div>
 </div>
-<div class="card bg-info">
+<div class="card auftrag-card">
   <div class="card-header">
     Auftragsbearbeitung
   </div>
@@ -71,7 +71,7 @@
 <div class="row">
 </br>
 <div class="row row-cols-2">
-<div class="card bg-warning">
+<div class="card fahrer-card">
   <div class="card-header">
     Fahrer
   </div>
@@ -82,7 +82,7 @@
   </div>
 </div>
 
-<div class="card bg-warning">
+<div class="card fahrer-card">
   <div class="card-header">
     Fahrer
   </div>

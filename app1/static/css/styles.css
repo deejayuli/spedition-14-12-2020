@@ -1,3 +1,27 @@
 h1 {
-    color: purple;
+    color: rgb(1, 1, 8);
 }
+
+body {
+    background-image: url(../pic/bgpic.jpg);
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    .special-card {
+               
+          background-color: rgb(168, 245, 106);
+          opacity: .7;
+        }
+.auftrag-card {
+        
+    background-color: rgb(243, 14, 110);
+    opacity: .8;
+    }
+.fahrer-card {
+            
+    background-color: rgb(235, 163, 31);
+    opacity: .8;
+    }
