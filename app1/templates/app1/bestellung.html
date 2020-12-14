@@ -1,30 +1,28 @@
 {% extends 'app1/base.html' %}
 
-{% block titel %} 
-<h1><center>Bitte Bestellung eingeben</center></h1> 
-{% endblock titel %} 
-
+{% block titel %}{% endblock titel %}
 {% block content %}
-<form method="POST">
-{% csrf_token %}
-<form>
-  <div class="mb-3">
-    <label for="kunde" class="form-label">Kunde</label>
-    
-    <select class="form-select" id="kunde"aria-describedby="kundenhelp" name="kunde">
-        {%for zeile in kunden%}
-        <option value"0">{{zeile}}</option>
-        {% endfor %}
-    </select>
-  </div>
-  <div class="mb-3">
-    <label for="bestellung" class="form-label">Bestellung</label>
-    <input type="text" class="form-control" id="bestellung" aria-describedby="bestellungHelp">
-    <div id="bestellungHelp" class="form-text">Bitte Bestellung eingeben.</div>
-  </div>
-  
+<div class="col">
+    <h1>Bitte Bestellung angeben   <i class="fas fa-cart-plus"></i></h1>
+    <br />
+    <form>
+    <div class="col mb-3">
+        <label for="kunde" class="form-label">Kunde</label>
+        <select class="form-select" id="kunde" aria-describedby="kundenHelp" name="kunde">
+            {% for zeile in kunden %}
+                <option value="{{zeile.id}}">{{zeile.name}}</option>
+            {% endfor %}
+        </select>
+        <div id="kundenHelp" class="form-text">Bitte einen Kunden auswählen</div>
+    </div>
+    <div class="mb-3">
+        <label for="bestellung" class="form-label">Bestellung</label>
+        <input type="text" class="form-control" id="bestellung" aria-describedby="bestellungHelp" name="bestellung">
+        <div id="bestellungHelp" class="form-text">Bitte Ihre Bestellung aufgeben</div>
+    </div>
     <button type="submit" class="btn btn-primary">Speichern</button>
-    <button type="submit" class="btn btn-success">neu</button>
-    <button type="reset" class="btn btn-danger">Abbrechen</button>
-</form>
+    <button type="reset" class="btn btn-success">Neu</button>
+    <button type="submit" class="btn btn-danger">Abbrechen</button>
+    </form>
+</div> 
 {% endblock content %}
