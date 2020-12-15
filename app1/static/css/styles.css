@@ -12,9 +12,11 @@ body {
 
     .special-card {
                
-          background-color: rgb(168, 245, 106);
-          opacity: .7;
-        }
+        background-color: rgb(168, 245, 106);
+        opacity: .6;
+        border-radius: 20px 20px 20px 20px;
+        padding: 10px 10px;
+      }
 .auftrag-card {
         
     background-color: rgb(243, 14, 110);
